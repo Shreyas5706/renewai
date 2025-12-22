@@ -1,0 +1,61 @@
+renewai/
+│
+├── app.py
+│   └── Main Streamlit entry
+│       - App title (website name)
+│       - Intro / overview
+│       - Sidebar navigation (auto via pages/)
+│
+├── pages/
+│   ├── 1_Solar_Forecast.py
+│   │   └── Uses:
+│   │       - solar_model.pkl
+│   │       - solar_history.csv (for charts)
+│   │       - user input → prediction
+│   │
+│   ├── 2_Wind_Forecast.py
+│   │   └── Uses:
+│   │       - wind_model.pkl
+│   │       - wind_history.csv
+│   │
+│   ├── 3_Hydro_Forecast.py
+│   │   └── Uses:
+│   │       - hydro_model.pkl
+│   │       - hydro_history.csv
+│   │
+│   ├── 4_Plant_Health.py
+│   │   └── Uses:
+│   │       - plant_health_model.pkl
+│   │       - plant_health_sample.csv
+│   │
+│   └── 5_CO2_Reduction.py
+│       └── Uses:
+│           - co2_model.pkl
+│           - co2_reference.csv
+│
+├── models/                     # ✅ INFERENCE ONLY
+│   ├── solar_model.pkl
+│   ├── wind_model.pkl
+│   ├── hydro_model.pkl
+│   ├── plant_health_model.pkl
+│   └── co2_model.pkl
+│
+├── data/                       # ✅ ONLY FOR VISUALIZATION
+│   ├── solar_history.csv
+│   ├── wind_history.csv
+│   ├── hydro_history.csv
+│   ├── plant_health_sample.csv
+│   └── co2_reference.csv
+│
+├── utils/
+│   ├── __init__.py
+│   ├── model_loader.py         # Load .pkl models once
+│   ├── preprocess.py           # Input formatting only
+│   └── predict.py              # model.predict() wrappers
+│
+├── assets/
+│   └── logo.png
+│
+├── requirements.txt
+├── README.md
+└── .gitignore
