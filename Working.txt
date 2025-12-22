@@ -59,3 +59,120 @@ renewai/
 ├── requirements.txt
 ├── README.md
 └── .gitignore
+
+
+
+# ENERGY FORECASTING MODEL
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_absolute_error, r2_score
+df = pd.read_csv("01_india_generation_final.xls")
+
+print("Dataset loaded successfully")
+print(df.head())
+print(df.columns)
+df["date"] = pd.to_datetime(df["date"])
+
+df["year"] = df["date"].dt.year
+df["month"] = df["date"].dt.month
+df = df.dropna()
+print("Rows after cleaning:", df.shape[0])
+X_rf = df_rf[
+    ["year", "month",
+     "solar_generation_mwh",
+     "wind_generation_mwh",
+     "hydro_generation_mwh"]
+]
+
+y_rf = df_rf["total_generation_mwh"]
+X_train, X_test, y_train, y_test = train_test_split(
+    X,
+    y,
+    test_size=0.2,
+    random_state=42
+)
+
+print("Train shape:", X_train.shape)
+print("Test shape:", X_test.shape)
+df_rf = df.sample(frac=0.2, random_state=42)
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.model_selection import train_test_split
+
+X_train_rf, X_test_rf, y_train_rf, y_test_rf = train_test_split(
+    X_rf, y_rf, test_size=0.2, random_state=42
+)
+
+rf_model = RandomForestRegressor(
+    n_estimators=30,   # VERY SMALL
+    max_depth=5,      # LIMIT TREE DEPTH
+    random_state=42,
+    n_jobs=1           # IMPORTANT
+)
+
+rf_model.fit(X_train_rf, y_train_rf)
+
+print("Random Forest trained (sample data)")
+
+from sklearn.metrics import mean_absolute_error, r2_score
+
+# Predictions
+y_pred_rf = rf_model.predict(X_test_rf)
+
+# Evaluation
+mae_rf = mean_absolute_error(y_test_rf, y_pred_rf)
+r2_rf = r2_score(y_test_rf, y_pred_rf)
+
+print("Random Forest MAE:", mae_rf)
+print("Random Forest R2 Score:", r2_rf)
+import matplotlib.pyplot as plt
+import pandas as pd
+
+feature_importance = pd.Series(
+    rf_model.feature_importances_,
+    index=X_rf.columns
+).sort_values(ascending=False)
+
+feature_importance.plot(kind="bar", figsize=(6,4))
+plt.title("Feature Importance (Random Forest)")
+plt.ylabel("Importance Score")
+plt.tight_layout()
+plt.show()
+import matplotlib.pyplot as plt
+import pandas as pd
+
+# Create month-wise pivot table
+monthly_heatmap = df.pivot_table(
+    values="total_generation_mwh",
+    index="year",
+    columns="month",
+    aggfunc="mean"
+)
+
+# Plot heatmap
+plt.figure(figsize=(8,5))
+plt.imshow(monthly_heatmap, cmap="YlGnBu", aspect="auto")
+plt.colorbar(label="Average Energy Generation (MWh)")
+
+plt.xticks(
+    ticks=range(12),
+    labels=["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+            "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+)
+
+plt.yticks(
+    ticks=range(len(monthly_heatmap.index)),
+    labels=monthly_heatmap.index
+)
+
+plt.xlabel("Month")
+plt.ylabel("Year")
+plt.title("Monthly Renewable Energy Generation Heatmap (India)")
+plt.tight_layout()
+plt.show()
+import joblib
+joblib.dump(model, "energy_forecast_model.pkl")
+print("Model saved as energy_forecast_model.pkl")
