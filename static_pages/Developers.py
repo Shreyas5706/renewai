@@ -57,22 +57,24 @@ def show():
     with col2:
         st.markdown("""
         ### Vekariya Srushti  
-        **Team Lead | Project Coordination & System Design**
+        **Team Lead | Project Coordination & Presentation Lead**
 
-        Leads overall project planning, coordination, and system integration.
-        Ensures alignment of analytics with sustainability objectives.
+        Coordinates the overall project execution, manages task distribution among team members,
+        and is responsible for preparing project presentations (PPTs) and documentation.
+        Ensures clarity of objectives, timely progress, and alignment with project goals.
         """)
 
         link_col1, link_col2 = st.columns(2)
 
         with link_col1:
             st.markdown(
+                
                 "[🔗 LinkedIn](https://www.linkedin.com/in/srushti-vekariya-a6563a2b7/)",
                 unsafe_allow_html=True
             )
 
         with link_col2:
-            st.markdown("🐙 GitHub: _To be added_")
+            st.markdown("[🐙 GitHub](https://github.com/SRUSHTI0401)  ")
 
     st.markdown("---")
 
@@ -86,10 +88,11 @@ def show():
     with c1:
         safe_image("assets/developers/Shreyas.jpeg", width=150)
         st.markdown("""
-        **Solanki Shreyas – AI & Data Analytics**
+        **Solanki Shreyas – Frontend Developer | Dashboard & UI Engineering**
 
-        Works on machine learning models, data preprocessing,
-        and predictive analytics integration.
+        Responsible for designing and implementing the interactive frontend using Streamlit.
+        Developed the dashboard layout, sidebar navigation, animations, and user experience flow
+        across all modules of RenewAI.
         """)
 
         st.markdown(
@@ -101,14 +104,14 @@ def show():
     with c2:
         safe_image("assets/developers/Disha.jpg", width=150)
         st.markdown("""
-        **Thanki Disha – Data Handling & Analysis**
+        **Thanki Disha – Machine Learning Developer | Data Modeling & Implementation**
 
-        Contributes to dataset preparation, validation,
-        and analytical interpretation.
+        Works on building and training machine learning models using renewable energy datasets.
+        Handles data preprocessing, feature selection, and model validation
         """)
 
         st.markdown(
-            "🐙 GitHub: _To be added_  |  "
+            "[🐙 GitHub](https://github.com/dishathanki)  |  "
             "[🔗 LinkedIn](https://www.linkedin.com/in/disha-thanki-b18ab7259/)",
             unsafe_allow_html=True
         )
@@ -118,30 +121,33 @@ def show():
     c3, c4 = st.columns(2)
 
     with c3:
-        safe_image("assets/developers/Om.jpg", width=150)
+        safe_image("assets/developers/Om.jpeg", width=150)
         st.markdown("""
-        **Bhinsara Om – Research & Sustainability Analysis**
+        **Bhinsara Om – Machine Learning Developer | Model Implementation**
 
-        Focuses on CO₂ reduction logic and renewable feasibility analysis.
+        Focuses on implementing predictive models for energy forecasting and plant performance.
+        Contributes to experimentation, tuning, and evaluation of ML models.
         """)
 
         st.markdown(
-            "🐙 GitHub: _To be added_  |  "
+            "[🐙 GitHub](https://github.com/om-bhinsara)  |  "
             "[🔗 LinkedIn](https://www.linkedin.com/in/om-j-bhisra/)",
             unsafe_allow_html=True
         )
 
     with c4:
-        safe_image("assets/developers/Shaiv.jpg", width=150)
+        safe_image("assets/developers/Shaiv.jpeg", width=150)
         st.markdown("""
-        **Patel Shaiv – Testing & Documentation**
+        **Patel Shaiv – Machine Learning Developer | Testing & Analysis**
 
-        Responsible for testing workflows and system documentation.
+        Assists in testing machine learning models, validating outputs,
+        and ensuring consistency and reliability of analytical results.
         """)
 
         st.markdown(
-            "🐙 GitHub: _To be added_  |  "
-            "🔗 LinkedIn: _To be added_"
+            "[🐙 GitHub](https://github.com/Shaiv05)  |  "
+            "[🔗 LinkedIn](www.linkedin.com/in/shaivpatel05)",
+            unsafe_allow_html=True
         )
 
     st.markdown("---")
@@ -151,5 +157,4 @@ def show():
     # --------------------------------------------------
     st.caption(
         "📬 Click on the icons to visit developer profiles. "
-        "More links can be added as the project evolves."
     )

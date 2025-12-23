@@ -186,7 +186,7 @@ if main_menu == "📊 Dashboard":
         show()
 
     elif sub_menu == "⚡ Energy Consumption":
-        from dashboard.Energy_Reduction import show
+        from dashboard.Energy_Consumption import show
         show()
 
     elif sub_menu == "🌍 Site Suitability":
