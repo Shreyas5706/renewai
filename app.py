@@ -198,7 +198,7 @@ if main_menu == "📊 Dashboard":
         show()
 
     elif sub_menu == "♻️ CO₂ Reduction":
-        from dashboard.co2_reduction import show
+        from dashboard.co2reduction import show
         show()
 
 # -------------------------------------------------
