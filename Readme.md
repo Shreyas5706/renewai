@@ -93,9 +93,24 @@ The system uses real-world datasets and machine learning models to support **dat
 - LinkedIn: https://www.linkedin.com/in/shreyas-solanki-1b6458285  
 
 ### 🤖 Machine Learning Developers
-- **Thanki Disha** – Model Development & Data Analysis  
-- **Bhinsara Om** – Model Implementation & Evaluation  
-- **Patel Shaiv** – Model Testing & Validation  
+### 🤖 Machine Learning Developers
+
+**Thanki Disha** – Model Development & Data Analysis  
+Worked on building and training machine learning models using renewable energy datasets.  
+Handled data preprocessing, feature selection, and analytical validation of model outputs.
+LinkedIn: https://www.linkedin.com/in/disha-thanki-b18ab7259/
+
+
+**Bhinsara Om** – Model Implementation & Evaluation  
+Focused on implementing predictive models for energy forecasting and plant performance.  
+Contributed to model experimentation, tuning, and evaluation to ensure reliable predictions.
+LinkedIn: https://www.linkedin.com/in/om-j-bhisra/
+
+**Patel Shaiv** – Model Testing & Validation  
+Responsible for testing machine learning models, validating results, and analyzing model performance.  
+Ensured consistency, accuracy, and reliability of outputs across different test cases.
+LinkedIn: https://www.linkedin.com/in/shaivpatel05/
+
 
 ---
 
