@@ -93,7 +93,6 @@ The system uses real-world datasets and machine learning models to support **dat
 - LinkedIn: https://www.linkedin.com/in/shreyas-solanki-1b6458285  
 
 ### 🤖 Machine Learning Developers
-### 🤖 Machine Learning Developers
 
 **Thanki Disha** – Model Development & Data Analysis  
 Worked on building and training machine learning models using renewable energy datasets.  
